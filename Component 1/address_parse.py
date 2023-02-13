@@ -58,6 +58,8 @@ def main():
             # prompt user for 2 word phrase to search for collocations in the corpus
             phrase = input('Enter a 2 word phrase: ')
             pmi = collocations(addresses, phrase)
+            print(f'The PMI for {phrase} is {pmi}')
+            
         elif selection == 9:
             # Quit
             break
