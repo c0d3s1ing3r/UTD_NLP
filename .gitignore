@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+Web Crawler/cleaned_pages/*.txt
+Web Crawler/visited_pages/*.txt
