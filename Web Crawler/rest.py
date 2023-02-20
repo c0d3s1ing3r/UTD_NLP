@@ -10,7 +10,7 @@ import json
 
 class RestEndpoint:
 
-    def __init__(self, url: str, method: str, timeout=10):
+    def __init__(self, url: str, method: str, timeout=10, log_level=logging.CRITICAL):
         self.method = method.upper()
         self.url = url
         self.timeout = timeout
@@ -20,9 +20,9 @@ class RestEndpoint:
             'User-Agent'    : 'Mozilla/5.0',
             'Content-Type'  : 'application/json'
         }
-        # set log level to critical to suppress requests logging
+        
         self.LOG = logging.getLogger(__name__)
-        self.LOG.setLevel(logging.CRITICAL)
+        self.LOG.setLevel(log_level)
     
     def call(self) -> requests.Response:
 
