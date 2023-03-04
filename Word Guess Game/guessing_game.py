@@ -30,7 +30,7 @@ def preprocess_text(text: str) -> tuple[list, list]:
     return words, nouns
 
 def guessing_game(top_nouns: list[str]) -> None:
-    cheat = False
+    cheat = True
     points = 5
     # randomly select a noun from the top 50 nouns
     noun = random.choice(top_nouns)
